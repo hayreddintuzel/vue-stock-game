@@ -7,10 +7,11 @@ Vue.use(Router);
 
 const routes = [
   { path: '/stocks', component: Stocks },
-  { path: '/portfolio', component: Portfolio},
+  { path: '/portfolio', component: Portfolio },
 ];
 
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
+  routes,
 });

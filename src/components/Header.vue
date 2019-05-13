@@ -12,6 +12,7 @@
           </router-link>
         </ul>
       </div>
+      <span class="mr-2">${{currentMoney}}</span>
       <button class="btn btn-sm btn-secondary mr-2">End Day</button>
       <div class="dropdown mr-2">
         <button class="btn btn-sm dropdown-toggle" data-toggle="dropdown">Save & Load</button>
@@ -26,7 +27,12 @@
 
 <script>
   export default {
-    name: 'Header'
+    name: 'Header',
+    computed: {
+      currentMoney : function () {
+        return this.$store.state.money;
+      },
+    }
   }
 
 </script>
