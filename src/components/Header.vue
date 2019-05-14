@@ -17,8 +17,8 @@
       <div class="dropdown mr-2">
         <button class="btn btn-sm dropdown-toggle" data-toggle="dropdown">Save & Load</button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Save</a>
-            <a class="dropdown-item" href="#">Load</a>
+            <a class="dropdown-item" @click="save()">Save</a>
+            <a class="dropdown-item" @click="load()">Load</a>
           </div>
       </div>
     </nav>
@@ -26,7 +26,7 @@
 </template>
 
 <script>
-  import { mapMutations } from 'vuex'
+  import { mapMutations, mapActions } from 'vuex'
 
   export default {
     name: 'Header',
@@ -37,6 +37,10 @@
     }, methods: {
       ...mapMutations([
         'endDay'
+      ]),
+      ...mapActions([
+        'save',
+        'load'
       ])
     }
   }
