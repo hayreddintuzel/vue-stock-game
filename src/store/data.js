@@ -21,6 +21,29 @@ const stocks = [
   },
 ];
 
-const money = 1000;
+const portfolio = [
+  {
+    id: 1,
+    stockname: 'BMW',
+    amount: 0,
+  },
+  {
+    id: 2,
+    stockname: 'Apple',
+    amount: 0,
+  },
+  {
+    id: 3,
+    stockname: 'Tesla',
+    amount: 0,
+  },
+  {
+    id: 4,
+    stockname: 'Vestel',
+    amount: 0,
+  },
+];
 
-export { stocks, money };
+const money = 10000;
+
+export { stocks, portfolio, money };

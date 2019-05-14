@@ -13,7 +13,7 @@
         </ul>
       </div>
       <span class="mr-2">${{currentMoney}}</span>
-      <button class="btn btn-sm btn-secondary mr-2">End Day</button>
+      <button class="btn btn-sm btn-secondary mr-2" @click="endDay()">End Day</button>
       <div class="dropdown mr-2">
         <button class="btn btn-sm dropdown-toggle" data-toggle="dropdown">Save & Load</button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -26,12 +26,18 @@
 </template>
 
 <script>
+  import { mapMutations } from 'vuex'
+
   export default {
     name: 'Header',
     computed: {
       currentMoney : function () {
         return this.$store.state.money;
       },
+    }, methods: {
+      ...mapMutations([
+        'endDay'
+      ])
     }
   }
 
